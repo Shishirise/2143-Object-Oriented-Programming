@@ -9,13 +9,12 @@
 <img src="https://thumbs2.imgbox.com/5c/ad/t4LCRPNR_t.jpg" width="200">
 
 
-
-
-
 #### Avatar:
 
+<img src="https://thumbs2.imgbox.com/a2/02/DuEWaSXY_t.jpg" width="75">
 
 
+https://thumbs2.imgbox.com/a2/02/DuEWaSXY_t.jpg
 
 ## Assignments
 |  #  | Folder Link                            | Assignment Description                               |
