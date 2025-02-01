@@ -5,9 +5,9 @@
 #### Website: https://shishiradhikari205.wixsite.com/ccrcs
 
 #### Image:
-<img src="https://Users/shishirise/IMG_4368.jpg width="200">
 
 
+<img src="https://Users/shishirise/Desktop/IMG_4368.jpg" width="200">
 
 #### Avatar:
 
