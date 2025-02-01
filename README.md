@@ -6,8 +6,7 @@
 
 #### Image:
 
-<img src="https://imgbox.com/hCrYxtrT" width="200">
-<img src="https://images2.imgbox.com/b3/d5/09sLKh1N_o.png" width="200">
+<img src="https://thumbs2.imgbox.com/ca/b3/hCrYxtrT_t.png" width="200">
 
 
 
