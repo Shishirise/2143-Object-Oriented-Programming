@@ -7,7 +7,8 @@
 #### Image:
 
 
-<img src="https://Users/shishirise/Desktop/IMG_4368.jpg" width="200">
+<img src="https://Users/shishirise/Desktop/IMG_4368.png" width="200">
+
 
 #### Avatar:
 
