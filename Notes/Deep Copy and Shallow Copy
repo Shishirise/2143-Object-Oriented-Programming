@@ -1,0 +1,103 @@
+Key Differences: Shallow Copy vs. Deep Copy
+
+1.Copy
+Shallow Copy: Copies only the pointer (memory address) of the data.
+Deep Copy: Copies the actual data and allocates new memory for it.
+
+2.Memory Sharing
+Shallow Copy: The memory is shared between the original and the copied object, meaning they both point to the same memory.
+Deep Copy: Each object gets its own memory allocation, ensuring the data is independent.
+
+3.Safety:
+Shallow Copy: It can cause problems like dangling pointers (when one object is deleted, the other is left with a broken reference) and double deletion (when both objects delete the same memory).
+Deep Copy: This issue is avoided since each object has its own separate memory, so one object’s deletion does not affect the other.
+
+4.Performance
+Shallow Copy: It's faster because it only copies the pointer, without creating additional memory.
+Deep Copy: It’s slower because it involves allocating new memory and copying the actual data.
+
+
+
+A.
+class Date {
+public:
+    int *day, *month, *year;
+
+    Date(int d, int m, int y) {
+        day = new int(d);
+        month = new int(m);
+        year = new int(y);
+    }
+
+    // Deep Copy Constructor  
+
+    Date(const Date &other) {
+        day = new int(*other.day);        //PTN
+        month = new int(*other.month);
+        year = new int(*other.year);
+    }
+
+    void show() {
+        std::cout << "Date: " << *day << "/" << *month << "/" << *year << std::endl;
+    }
+
+    ~Date() {
+        delete day;
+        delete month;
+        delete year;
+    }
+};
+
+int main() {
+    Date d1(5, 2, 2025);
+    Date d2 = d1;  // Deep copy ensures separate memory allocation   //PTN
+
+    d1.show();
+    d2.show();
+
+    return 0;  // No issues, as each object has its own memory
+}
+
+
+B.
+
+#include <iostream>
+
+class Date {
+public:
+    int *day, *month, *year;
+
+    Date(int d, int m, int y) {
+        day = new int(d);
+        month = new int(m);
+        year = new int(y);
+    }
+
+    // Default copy constructor (Shallow Copy)
+    Date(const Date &other) {
+        day = other.day;             //PNT
+        month = other.month;
+        year = other.year;
+    }
+
+    void show() {
+        std::cout << "Date: " << *day << "/" << *month << "/" << *year << std::endl;
+    }
+
+    ~Date() {
+        delete day;
+        delete month;
+        delete year;
+    }
+};
+
+int main() {
+    Date d1(5, 2, 2025);
+    Date d2 = d1;  // Shallow copy        //PNT
+
+    d1.show();
+    d2.show();
+
+    return 0;  // Problem: Both objects share the same memory, leading to double deletion
+}
+
