@@ -14,10 +14,3 @@
 
 <img src="https://thumbs2.imgbox.com/a2/02/DuEWaSXY_t.jpg" width="75">
 
-## Assignments
-|  #  | Folder Link                            | Assignment Description                               |
-| :-: | -------------------------------------- | ---------------------------------------------------- |
-|  1  | [A01]                                  |                                                      |
-|  2  |                                        |                                                      |
-|  3  |                                        |                                                      |
-|  1  |                                        |                                                      |
