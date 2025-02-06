@@ -17,7 +17,6 @@ Shallow Copy: It's faster because it only copies the pointer, without creating a
 Deep Copy: It’s slower because it involves allocating new memory and copying the actual data.
 
 
-
 A.
 class Date {
 public:
@@ -100,4 +99,14 @@ int main() {
 
     return 0;  // Problem: Both objects share the same memory, leading to double deletion
 }
+
+
+Shallow Copy:
+month = other.month;
+This just copies the reference, so both objects point to the same memory.
+
+Deep Copy:
+month = new std::string(*other.month);
+This allocates new memory for month and copies the actual value from other.month into it, ensuring the two objects have independent copies of the data.
+
 
