@@ -1,3 +1,3 @@
 ## UML Class Diagram
 
-![UML Diagram](path_to_image/uml_diagram.png)
+![View UML Diagram](https://raw.githubusercontent.com/username/repository/branch/assignments/P01/Uml%20diagram.pdf)
