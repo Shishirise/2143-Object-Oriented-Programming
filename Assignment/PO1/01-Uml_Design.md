@@ -47,9 +47,9 @@
 ---
 
 ## Design Reasoning
-I built this JSON database manager with three classes — Candy, JSONDBManager, and CandyManager — to keep things organized and easy to work with. Here’s the breakdown:
+I built this JSON database manager with three classes  Candy, JSONDBManager, and CandyManager  to keep things organized and easy to work with. Here’s the breakdown:
 - **Candy**:
-  This is just a simple class to hold candy info like id, name, price, and stock. It doesn’t do much on its own — it’s like a data card for each candy.
+  This is just a simple class to hold candy info like id, name, price, and stock. It doesn’t do much on its own  it’s like a data card for each candy.
 - **JSONDBManager**:
   This handles all the JSON file tasks: reading, writing, and ensuring data integrity with methods like `readJSON()`, `writeJSON()`, and `validateJSON()`.
 - **CandyManager**:
