@@ -40,10 +40,12 @@ Handles JSON file operations such as reading, writing, and validating JSON data.
 ---
 
 ## Relationships
-- **Candy (1..*) --- JSONDBManager (Composition):**
-  Think of JSONDBManager as a librarian who keeps track of a bunch of Candy.
-- **JSONDBManager (1) --- CandyManager (Composition):**
-  CandyManager has one JSONDBManager (called `json_db`) to handle all the file-related tasks.
+
+- **Candy (1..*) --- JSONDBManager (Composition):**  
+  The `JSONDBManager` acts as a manager responsible for maintaining data integrity for multiple `Candy` objects. It ensures the smooth operation of data storage and retrieval for the candies it oversees.
+
+- **JSONDBManager (1) --- CandyManager (Composition):**  
+  The `CandyManager` is equipped with a single instance of `JSONDBManager` (referred to as `json_db`), which handles all file-related operations, such as loading and saving data, thereby centralizing file management responsibilities.
 
 ---
 
