@@ -70,7 +70,7 @@ It’s a "has-a" relationship, which makes it easy to swap out JSONDBManager for
 - **JSONDBManager** ensures the integrity of JSON data to avoid any file-related errors.
 - **CandyManager** could add additional checks, such as:
   - Ensuring IDs aren’t duplicated.
-  - Verifying stock isn’t negative when adding candies.
+  - Verifying stock isn’t negative when adding candy.
 
 
 
