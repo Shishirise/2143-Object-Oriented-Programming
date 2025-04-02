@@ -1,6 +1,3 @@
-
 ## UML Class Diagram
 
-You can view the UML Class Diagram by clicking the link below:
-
-[📄 UML Diagram](Uml%20diagram.pdf)
+![UML Diagram](path_to_image/uml_diagram.png)
