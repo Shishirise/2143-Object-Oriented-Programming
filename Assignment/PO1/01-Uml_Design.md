@@ -1,7 +1,7 @@
 # UML Diagram
 [UML Diagram PDF](./Uml%20diagram.pdf)
 
-# UML Diagram
+
 
 ## CandyManager
 - **Attributes**
