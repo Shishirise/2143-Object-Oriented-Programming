@@ -1,4 +1,6 @@
 # UML Diagram
+[UML Diagram PDF](./Uml%20diagram.pdf)
+
 
 ## CandyManager
 - **Attributes**
@@ -34,4 +36,4 @@
   - `get_price()` : void
 
 
-[UML Diagram PDF](./Uml%20diagram.pdf)
+
