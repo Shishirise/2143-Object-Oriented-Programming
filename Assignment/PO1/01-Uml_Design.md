@@ -17,6 +17,7 @@
 ---
 
 ## JSONDBManager
+Handles JSON file operations such as reading, writing, and validating JSON data.
 
 ---
 
