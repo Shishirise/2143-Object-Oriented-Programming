@@ -1,6 +1,8 @@
 
 ## PUT Request
 
+PUT  http://127.0.0.1:5000/api/meteorites/0
+
 ###  (`index = 0`)
 ```json
 {
