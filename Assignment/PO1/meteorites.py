@@ -3,7 +3,7 @@ import json
 import os
 
 app = Flask(__name__)
-FILE = "/Users/shishiradhikari/Documents/meteorites/meteorites.json"  # Your specified path
+FILE = "/Users/shishiradhikari/Documents/meteorites/meteorites.json"  # Your specified path or file name
 
 class JsonDB:
     def __init__(self, filepath):
