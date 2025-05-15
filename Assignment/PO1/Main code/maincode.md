@@ -115,7 +115,7 @@ This design intentionally separates general-purpose functionality from domain-sp
 ###  Design Philosophy
 
 > This exercise shows the power of Object-Oriented Programming (OOP):  
-> you can build reusable, generic tools (`JsonDB`), and then extend them for specific needs (`MeteoriteDB`), keeping your code organized, scalable, and easy to maintain.
+> you can build reusable, generic tools (`JsonDB`), and then extend them for specific needs (`MeteoriteDB`), keeping our code organized, scalable, and easy to maintain.
 
 Even though the example might seem a little contrived, this structure helps demonstrate:
 - Inheritance
