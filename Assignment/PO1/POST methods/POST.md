@@ -1,3 +1,8 @@
+## POST method
+POST http://127.0.0.1:5000/api/meteorites
+
+###  JSON 
+```json
 {
   "GeoLocation": "(35.666670, 139.650000)",
   "_id": { "$oid": "5d9deac32ebe2da7d4da1b3e" },
