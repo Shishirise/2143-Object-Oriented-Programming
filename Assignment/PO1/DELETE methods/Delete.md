@@ -18,5 +18,4 @@ DELETE http://127.0.0.1:5000/api/meteorites/0
     "reclat": 35.66667,
     "reclong": 139.65,
     "year": 1986
-  }
 }
