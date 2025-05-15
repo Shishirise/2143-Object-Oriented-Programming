@@ -1,6 +1,6 @@
-# Create a Markdown explanation of the full code structure and logic
+#  full code structure and logic
 
-code_explanation_md = """#  Flask Meteorite API Code Explanation
+#  Flask Meteorite API Code Explanation
 
 This Flask API allows users to perform CRUD operations on a list of meteorites stored in a JSON file. Here's a breakdown of the code:
 
