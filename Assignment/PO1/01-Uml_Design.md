@@ -1,79 +1,88 @@
-# UML Diagram
-[UML Diagram PDF](./Uml%20diagram.pdf)
 
 
-
-## CandyManager
-- **Attributes**
-  - `candies`: List
-  - `json_db`: JSONDBManager
-- **Methods**
-  - `add_candy()` : void
-  - `remove_candy()` : void
-  - `get_candy_list()` : void
-  - `load_from_file()` : void
-  - `save_to_file()` : void
+readme_content = """# UML Diagram  
+[UML Diagram PDF](./UML%20Diagram.pdf)
 
 ---
 
-## JSONDBManager
-Handles JSON file operations such as reading, writing, and validating JSON data.
+## Flask App
+- **Attributes**
+  - `meteor_db`: `MeteoriteDB`
+- **Methods**
+  - `get_all_meteorites()` : `void`  
+  - `add_meteorite()` : `void`  
+  - `get_meteorite()` : `void`  
+  - `update_meteorite()` : `void`  
+  - `delete_meteorite()` : `void`  
 
 ---
 
-## Candy
+## JsonDB
+Handles JSON file operations such as reading, writing, and performing basic CRUD operations on JSON data.
+
 - **Attributes**
-  - `name`: String
-  - `file_path`: String
-  - `flavor`: String
-  - `price`: float
+  - `filepath`: `str`  
+  - `data`: `list`
 - **Methods**
-  - `load_data()` : void
-  - `save_data()` : void
-  - `validate_json()` : void
-  - `get_name()` : void
-  - `set_name()` : void
-  - `get_flavor()` : void
-  - `set_flavor()` : void
-  - `get_price()` : void
+  - `_load_data()` : `void`  
+  - `_save_data()` : `void`  
+  - `read_all()` : `list`  
+  - `read_one(index: int)` : `dict`  
+  - `create(record: dict)` : `int`  
+  - `update(index: int, updates: dict)` : `dict`  
+  - `delete(index: int)` : `dict`  
+
+---
+
+## MeteoriteDB
+Inherits from `JsonDB` and provides domain-specific operations related to meteorite data.
+
+- **Methods**
+  - `find_by_year_range(start: int, end: int)` : `list`  
+  - `find_heaviest(top_n: int)` : `list`  
 
 ---
 
 ## Relationships
 
-- **Candy (1..*) --- JSONDBManager (Composition):**  
-  The `JSONDBManager` is responsible for maintaining data integrity for multiple `Candy` objects. It ensures the smooth operation of data storage and retrieval for the candies it oversees.
+- **Flask App (1) --- MeteoriteDB (Composition):**  
+  The `Flask App` contains one instance of `MeteoriteDB` called `meteor_db`, which handles data operations and exposes them via API endpoints.
 
-- **JSONDBManager (1) --- CandyManager (Composition):**  
-  The `CandyManager` is equipped with a single instance of `JSONDBManager` (referred to as `json_db`), which handles all file-related operations, such as loading and saving data, thereby centralizing file management responsibilities.
+- **MeteoriteDB (is-a) --- JsonDB (Inheritance):**  
+  `MeteoriteDB` extends `JsonDB` to reuse its core functionality and add features specific to meteorite data.
 
 ---
 
 ## Design Reasoning
-I built this JSON database manager with three classes  Candy, JSONDBManager, and CandyManager  to keep things organized and easy to work with. Here’s the breakdown:
-- **Candy**:
-  This is just a simple class to hold candy info like id, name, price, and stock. It doesn’t do much on its own  it’s like a data card for each candy.
-- **JSONDBManager**:
-  This handles all the JSON file tasks: reading, writing, and ensuring data integrity with methods like `readJSON()`, `writeJSON()`, and `validateJSON()`.
-- **CandyManager**:
-  It keeps a list of candies in memory, uses `json_db` to save them, and provides handy methods like `add_candy`, `remove_candy`, `get_candy_list`, `load_from_file`, and `save_to_file` to manage everything.
+
+I designed this meteorite data management system with three logical components: **Flask App**, **JsonDB**, and **MeteoriteDB** — to promote clean separation of concerns, reuse, and scalability.
+
+- **JsonDB**  
+  Handles all core functionality such as reading, writing, and modifying records from a JSON file. It provides the foundational CRUD logic that can be reused across different datasets.
+
+- **MeteoriteDB**  
+  Extends the generic JSON database with meteorite-specific queries such as filtering by year and sorting by mass. This allows meteorite logic to live separately from core database logic.
+
+- **Flask App**  
+  Acts as a RESTful interface that exposes all meteorite functionality via API endpoints. It depends on a `MeteoriteDB` instance to read from and modify the data.
 
 ---
 
-## Why Composition (Not Inheritance)?
-I chose composition because it made more sense for this design:
-- **CandyManager** has a JSONDBManager to handle file operations.
-- **JSONDBManager** deals with multiple Candy objects.
+## Why Inheritance (Not Composition)?
 
-It’s a "has-a" relationship, which makes it easy to swap out JSONDBManager for a different implementation if needed.
+- `MeteoriteDB` is a specialized form of `JsonDB`, so **inheritance** is the right fit.  
+- The relationship is "MeteoriteDB **is-a** JsonDB," which allows shared methods like `read_all()`, `create()`, and `update()` to be inherited and reused.
+
+By contrast:
+- The **Flask App** uses **composition**: it **has-a** `MeteoriteDB`.
 
 ---
 
 ## Error-Checking
-- **JSONDBManager** ensures the integrity of JSON data to avoid any file-related errors.
-- **CandyManager** could add additional checks, such as:
-  - Ensuring IDs aren’t duplicated.
-  - Verifying stock isn’t negative when adding candy.
 
-
+- **JsonDB** includes safe file handling and verifies whether the JSON file exists before loading.
+- **MeteoriteDB** can be further extended to include validation, such as:
+  - Ensuring `mass` is a float and `year` is a valid number.
+  - Filtering out incomplete or corrupted records.
+"""
 
