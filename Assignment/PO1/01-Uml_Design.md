@@ -1,7 +1,7 @@
 
 
 ## UML Diagram  
-[UML Diagram PDF](./UML%20Diagram.pdf)
+[UML Diagram PDF](.https://github.com/Shishirise/2143-Object-Oriented-Programming/blob/main/Assignment/PO1/a.jpg)
 
 ---
 
