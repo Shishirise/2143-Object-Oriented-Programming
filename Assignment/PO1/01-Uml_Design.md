@@ -1,10 +1,7 @@
 
 
 ## UML Diagram  
-## UML Diagram  
-![UML Diagram](https://thumbs2.imgbox.com/3b/34/ElOpsgxk_t.jpg)
 
----
 
 ## Flask App
 - **Attributes**
