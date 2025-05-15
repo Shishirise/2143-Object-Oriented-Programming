@@ -68,11 +68,7 @@ Returns the top N heaviest meteorites (default is 5). Accepts `?top=n` query par
 
 ---
 
-# Add OOP explanation for JsonDB and MeteoriteDB to markdown file
 
-oop_design_md = """
-
----
 
 ##  OOP Design Explanation: JsonDB vs MeteoriteDB
 
